@@ -124,13 +124,13 @@ def process_audio_file(file_path, sampling_rate, model, threshold=0.5):
         print(f"Error during screaming detection: {e}")
         return False
 
-# mp3 파일 재생 함수
+# wav 파일 재생 함수(싸이렌 소리 재생)
 def play_siren():
     file_path = '/Users/iuseong/Downloads/untitled folder/police-siren-sound-effect-240674.wav'
-
+    
     # WAV 파일 로드
     sample_rate, audio_data = wavfile.read(file_path)  # 샘플 레이트와 오디오 데이터 가져오기
-
+    
     # 사운드 재생
     sd.play(audio_data, samplerate=sample_rate)
 
